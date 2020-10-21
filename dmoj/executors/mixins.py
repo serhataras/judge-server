@@ -155,6 +155,10 @@ class NullStdoutMixin:
         return result
 
 
+class SingleDigitVersionMixin:
+    version_regex = re.compile(r'.*?(\d+(?:\.\d+)*)', re.DOTALL)
+
+
 class ScriptDirectoryMixin:
     """
     Certain script executors need access to the entire directory of the script,
